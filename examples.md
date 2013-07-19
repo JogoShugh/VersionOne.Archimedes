@@ -34,3 +34,19 @@ We want the Name and Email for the Member so we specify those attributes in the 
 <Server Base URI>/meta.v1/Member?xsl=api.xsl
 ```
 
+## VersionOne Capacities
+
+```
+<Server Base URI>/rest-1.v1/Data/Capacity?where=Timebox='Timebox:1285'&sel=Member.Name,Member.Email,Value,Timebox.Name
+```
+
+We want capacity values so we use `Capacity` as the [from](http://community.versionone.com/Developers/Developer-Library/Documentation/API/Queries/from).
+
+We want capacity values for a specific sprint so we use the OID `Timebox:1285` as the [where](http://community.versionone.com/Developers/Developer-Library/Documentation/API/Queries/where).
+
+We want the member and the capacity value so we specify those attributes in the [select](http://community.versionone.com/Developers/Developer-Library/Documentation/API/Queries/select). For member, we grab name for UI display and email for linking to Clarity PPM resources. The `Timebox.Name` is selected only to confirm the where. If other attributes would be useful, the entire set of Epic attributes can be viewed using meta:
+
+```
+<Server Base URI>/meta.v1/Capacity?xsl=api.xsl
+```
+
