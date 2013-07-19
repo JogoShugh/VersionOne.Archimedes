@@ -8,7 +8,7 @@ To use queries below, see documentation on [Server Base URI](http://community.ve
 <Server Base URI>/rest-1.v1/Data/Epic?where=Category.Name='Initiative'&sel=Name,Number,Reference,Category
 ```
 
-We want a list of Epics so we use Epics as the [from](http://community.versionone.com/Developers/Developer-Library/Documentation/API/Queries/from).
+We want a list of Epics so we use `Epic` as the [from](http://community.versionone.com/Developers/Developer-Library/Documentation/API/Queries/from).
 
 We want to filter on just Initiative Epics so we use `Category.Name='Initiative'` as the [where](http://community.versionone.com/Developers/Developer-Library/Documentation/API/Queries/where). If we only used `Category` we would need to specify an OID for the list value of 'Initiative'.
 
@@ -17,3 +17,20 @@ We want the Name and ID for the Epic so we specify those attributes in the [sele
 ```
 <Server Base URI>/meta.v1/Epic?xsl=api.xsl
 ```
+
+## VersionOne Initiative Epics
+
+```
+<Server Base URI>/rest-1.v1/Data/Member?sel=Name,Email
+```
+
+We want a list of Members so we use `Member` as the [from](http://community.versionone.com/Developers/Developer-Library/Documentation/API/Queries/from).
+
+We want all of the Members so there is no [where](http://community.versionone.com/Developers/Developer-Library/Documentation/API/Queries/where).
+
+We want the Name and Email for the Member so we specify those attributes in the [select](http://community.versionone.com/Developers/Developer-Library/Documentation/API/Queries/select). If other attributes would be useful, the entire set of Epic attributes can be viewed using meta:
+
+```
+<Server Base URI>/meta.v1/Member?xsl=api.xsl
+```
+
