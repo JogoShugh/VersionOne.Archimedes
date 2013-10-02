@@ -32,8 +32,4 @@ We want to filter to the children of initiative epics so we use `Super.Category.
 
 We want the name and ID for the feature epic so we specify those attributes in the [select](http://community.versionone.com/Developers/Developer-Library/Documentation/API/Queries/select). The VersionOne [OID](http://community.versionone.com/Developers/Developer-Library/Concepts/OID_Token) comes "free" with every query, so we don't need to specify it explicitly. But the ID that people see in the UI is `Number`. And if the ID we really want is a Clarity PPM Project ID, then we would need to store that in another attribute like `Reference`. (I recommend using custom field because other integrations may use and overwrite Reference for other purposes.) To connect this information to the initiative epic, we also want the `Super.Number` and the `Super.Reference` (again, this might be a custom field instead).
 
-In the example, `Category` is added only as a way to confirm the where. If other attributes would be useful, the entire set of `Epic` attributes can be viewed using meta:
-
-```
-<Server Base URI>/meta.v1/Epic?xsl=api.xsl
-```
+In the example, `Category` is added only as a way to confirm the where.
