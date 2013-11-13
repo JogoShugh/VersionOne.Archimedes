@@ -17,8 +17,8 @@ With newlines for readability:
 
 ```
 <Server Base URI>/rest-1.v1/Data/Actual
-	?sel=Date,Value,Member.Name,Member.Email,Workitem.SuperAndUp:Epic[SuperAndUp.@Count=$LEVEL]
-	&where=Workitem.SuperAndUp:Epic[SuperAndUp.@Count=$LEVEL]
+	?sel=Date,Value,Member.Name,Member.Email,Workitem.ParentMeAndUp.SuperAndUp[SuperAndUp.@Count=$LEVEL]
+	&where=Workitem.ParentMeAndUp.SuperAndUp[SuperAndUp.@Count=$LEVEL]
 	&with=$LEVEL=0
 ```
 
@@ -32,12 +32,12 @@ Note: it would be a good idea to have additional `where` parameters to narrow th
 
 ```
 <Server Base URI>/rest-1.v1/Data/Actual
-	?sel=Date,Value,Member.Name,Member.Email,Workitem.SuperAndUp:Epic[SuperAndUp.@Count=$LEVEL]
-	&where=Workitem.SuperAndUp:Epic[SuperAndUp.@Count=$LEVEL];Date=$DATE
-	&with=$LEVEL=0=$DATE=2011-09-20
+	?sel=Date,Value,Member.Name,Member.Email,Workitem.ParentMeAndUp.SuperAndUp[SuperAndUp.@Count=$LEVEL]
+	&sort=Member.Email,-Date
+	&where=Workitem.ParentMeAndUp.SuperAndUp[SuperAndUp.@Count=$LEVEL];Date=$DATE
+	&with=$LEVEL=0|$DATE=2011-09-20
 ```
 
 The query needs to be run twice to account for actuals that:
 * roll up to only a root level epic
 * roll up to a "feature epic" that is a child of a root epic
-
