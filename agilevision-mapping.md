@@ -4,7 +4,7 @@
 
 Map directly to the concepts suggested by the Agile Vision Interfaces.
 
-<table border="1">
+<table border="1" width="100%">
 	<tr>
 		<th>Clarity PPM</th>
 		<th>Agile Vision</th>
@@ -67,7 +67,7 @@ Map directly to the concepts suggested by the Agile Vision Interfaces.
 
 Ignore the top-level Agile Vision concepts (release and sprint), shoehorning epics into those "slots". Match up on story and task.
 
-<table border="1">
+<table border="1" width="100%">
 	<tr>
 		<th>Clarity PPM</th>
 		<th>Agile Vision</th>
@@ -130,7 +130,7 @@ Ignore the top-level Agile Vision concepts (release and sprint), shoehorning epi
 
 Ignore the Agile Vision concepts but leverage the structure that it generates in Clarity PPM. Start from the top of the Epic hierarchy and work the way down.
 
-<table border="1">
+<table border="1" width="100%">
 	<tr>
 		<th>Clarity PPM</th>
 		<th>Agile Vision</th>
@@ -177,8 +177,8 @@ Ignore the Agile Vision concepts but leverage the structure that it generates in
 
 ### Pros
 
-* Simplest approach to build. Minimizes the coupling to VersionOne asset types.
-No need to compensate for VersionOne options about level of time-tracking.
+* Simple to build. Minimizes the coupling to VersionOne asset types.
+No need to compensate for VersionOne options about level of time-tracking. The entire Clarity PPM WBS is constructed from one type of VersionOne asset.
 * Focus on Epics. Customers have already indicated they want correlation between Clarity PPM Projects and VersionOne Epics.
 * Relevant information for the PMO and the business. Progress on epics is more indicative of project health and progress against business value.
 * Empowers the PMO and business with advantages of agile. While waterfall projects cannot recognize business value until they reach the final phase (production), agile projects can recognize business value as features are completed. Therefore, the business can decide to stop an agile project and still realize partial business value.
@@ -187,13 +187,13 @@ No need to compensate for VersionOne options about level of time-tracking.
 ### Cons
 
 * May not be granular enough for financial categorization. For example, customers may need to distinguish stories from defects.
-* Forces VersionOne customers to adopt a structure of 4 epics in order to have timesheet data. This seems 
+* Forces VersionOne customers to adopt a structure of 4 epics in order to have timesheet data. We have been unable to find any plausible story to explain why 4 levels of epics should be required. It seems unlikely that any customer would adopt this convention.
 
 ## Two-Level Mapping
 
 Deviate from the Agile Vision concepts and structure. Map Clarity PPM Project to a VersionOne Feature Epic. Pull back 1 level of children to populate WBS for time entry.
 
-<table border="1">
+<table border="1" width="100%">
 	<tr>
 		<th>Clarity PPM</th>
 		<th>Agile Vision</th>
@@ -228,9 +228,14 @@ Deviate from the Agile Vision concepts and structure. Map Clarity PPM Project to
 
 ### Pros
 
-* Focus on negotiable features in PPM.
-* Fits well with recommendations for and common use of VersionOne.
-* Simple to explain and put into practice.
+* Simplest approach to explain to both agile team and PMO; hence, the simplest to put into practice.
+* Fits well with recommendations for and common use of VersionOne. Allows users greatest flexibility in how they manage their projects in VersionOne because it has the least burden of implied conventions.
+* Simple to build. Minimizes the coupling to VersionOne asset types.
+No need to compensate for VersionOne options about level of time-tracking. The entire Clarity PPM WBS is constructed from one type of VersionOne asset. There are fewer interfaces to implement in code.
+* Focus on Epics. Customers have already indicated they want correlation between Clarity PPM Projects and VersionOne Epics.
+* Relevant information for the PMO and the business. Progress on epics is more indicative of project health and progress against business value.
+* Empowers the PMO and business with advantages of agile. While waterfall projects cannot recognize business value until they reach the final phase (production), agile projects can recognize business value as features are completed. Therefore, the business can decide to stop an agile project and still realize partial business value.
+* Avoids data impedance mismatch with project-sprint and effort tracking.
 
 ### Cons
 
