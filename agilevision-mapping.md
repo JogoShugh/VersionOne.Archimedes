@@ -186,8 +186,8 @@ No need to compensate for VersionOne options about level of time-tracking. The e
 
 ### Cons
 
-* May not be granular enough for financial categorization. For example, customers may need to distinguish stories from defects.
 * Forces VersionOne customers to adopt a structure of 4 epics in order to have timesheet data. We have been unable to find any plausible story to explain why 4 levels of epics should be required. It seems unlikely that any customer would adopt this convention.
+* May not be granular enough for financial categorization. For example, customers may need to distinguish stories from defects.
 
 ## Two-Level Mapping
 
@@ -215,7 +215,7 @@ Deviate from the Agile Vision concepts and structure. Map Clarity PPM Project to
 	<tr>
 		<td>Timesheet Entry</td>
 		<td>Worklog</td>
-		<td>child of Task</td>
+		<td>child of Sprint</td>
 		<td>Actual</td>
 	</tr>
 	<tr>
