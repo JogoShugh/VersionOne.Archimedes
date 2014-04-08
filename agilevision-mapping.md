@@ -205,13 +205,13 @@ Deviate from the Agile Vision concepts and structure. Map Clarity PPM Project to
 	</tr>
 	<tr>
 		<td>Project</td>
-		<td>Release</td>
+		<td>Release/Project</td>
 		<td>root</td>
 		<td>Epic</td>
 	</tr>
 	<tr>
 		<td>Task</td>
-		<td>Sprint</td>
+		<td>Task</td>
 		<td>child of Release</td>
 		<td>Workitem</td>
 	</tr>
