@@ -143,25 +143,25 @@ Ignore the Agile Vision concepts but leverage the structure that it generates in
 		<td>Project</td>
 		<td>Release</td>
 		<td>root</td>
-		<td>Epic</td>
+		<td>Epic (Initiative)</td>
 	</tr>
 	<tr>
 		<td>Task</td>
 		<td>Sprint</td>
 		<td>child of Release</td>
-		<td>Epic</td>
+		<td>Epic (Feature)</td>
 	</tr>
 	<tr>
 		<td>Task</td>
 		<td>User Story</td>
 		<td>child of Sprint</td>
-		<td>Epic</td>
+		<td>Epic (Sub-Feature)</td>
 	</tr>
 	<tr>
 		<td>Task</td>
 		<td>Task</td>
 		<td>child of User Story</td>
-		<td>Epic</td>
+		<td>Epic (Non-Functional)</td>
 	</tr>
 	<tr>
 		<td>Timesheet Entry</td>
